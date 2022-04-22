@@ -1,0 +1,7 @@
+services
+product: 8080-8089
+order: 8090-8099
+
+dbs
+postgres: 5432
+pgadmin: 15432

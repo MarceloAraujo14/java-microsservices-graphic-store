@@ -1,0 +1,69 @@
+{
+  "type": "record",
+  "name": "Product",
+  "version": 1,
+  "namespace": "com.graphicstore.product.avro.schema",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "category",
+      "type":{
+      "name": "category_enum",
+      "type": "enum",
+      "symbols": ["DIGITAL","OFF_SET","SUBLIMACAO"] }
+    },
+    {
+      "name": "substrate",
+      "type": "string"
+    },
+    {
+      "name": "color",
+      "type": {
+        "name": "color_enum",
+        "type": "enum",
+      "symbols": ["_4x4","_4x1","_4x0","_1x0","_1x1","_1x4"] }
+    },
+    {
+      "name": "height",
+      "type": "int"
+    },
+    {
+      "name": "width",
+      "type": "int"
+    },
+    {
+      "name": "finishings",
+      "type": {
+        "type": "array",
+        "items": "string",
+        "default": []
+      }
+    },
+    {
+      "name": "quantity",
+      "type": "int"
+    },
+    {
+      "name": "price",
+      "type": {
+      "type": "bytes",
+      "logicalType": "decimal",
+      "precision": 4,
+      "scale": 2 }
+    },
+    {
+      "name": "created_at",
+      "type": {
+        "type": "long",
+        "logicalType": "local-timestamp-millis"
+      }
+    }
+  ]
+}

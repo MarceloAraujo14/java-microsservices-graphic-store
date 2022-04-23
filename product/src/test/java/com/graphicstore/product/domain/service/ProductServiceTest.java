@@ -9,6 +9,7 @@ import com.graphicstore.product.domain.agregate.enums.ColorBySide;
 import com.graphicstore.product.domain.agregate.entity.Product;
 import com.graphicstore.product.domain.agregate.enums.ProductCategory;
 import com.graphicstore.product.domain.repository.ProductRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -40,12 +41,13 @@ class ProductServiceTest {
 
     @InjectMocks
     private ProductService underTest;
+    private ProductRequest request;
+    private Product product;
+    private ProductResponse response;
 
-
-    @Test
-    void save() {
-        //given
-        var request = new ProductRequest(
+    @BeforeEach
+    void setUp() {
+        this.request = new ProductRequest(
                 "Cartão de visita",
                 ProductCategory.OFF_SET,
                 "Couchê 90g",
@@ -55,7 +57,7 @@ class ProductServiceTest {
                 1000,
                 new BigDecimal("90.00"));
 
-        var product = new Product(
+        this.product = new Product(
                 1,
                 "Cartão de visita",
                 ProductCategory.OFF_SET,
@@ -66,7 +68,7 @@ class ProductServiceTest {
                 1000,
                 new BigDecimal("90.00"));
 
-        var response = new ProductResponse(
+        this. response = new ProductResponse(
                 1,
                 "Cartão de visita",
                 ProductCategory.OFF_SET,
@@ -77,7 +79,11 @@ class ProductServiceTest {
                 1000,
                 new BigDecimal("90.00"),
                 LocalDateTime.now());
+    }
 
+    @Test
+    void save() {
+        //given
         //when
         when(mapper.toProduct(request)).thenReturn(product);
         when(mapper.toResponse(product)).thenReturn(response);
@@ -97,28 +103,6 @@ class ProductServiceTest {
     void findById() throws ProductNotFoundException {
         //given
         var id = 1;
-        var product = new Product(
-                1,
-                "Cartão de visita",
-                ProductCategory.OFF_SET,
-                "Couchê 90g",
-                ColorBySide._4x4,
-                5, 9,
-                List.of("verniz total"),
-                1000,
-                new BigDecimal("90.00"));
-
-        var response = new ProductResponse(
-                1,
-                "Cartão de visita",
-                ProductCategory.OFF_SET,
-                "Couchê 90g",
-                ColorBySide._4x4,
-                5, 9,
-                List.of("verniz total"),
-                1000,
-                new BigDecimal("90.00"),
-                LocalDateTime.now());
 
         //when
         when(mapper.toResponse(product)).thenReturn(response);
@@ -150,29 +134,6 @@ class ProductServiceTest {
     void findAll() throws ProductNotFoundException {
 
         //given
-        var product = new Product(
-                1,
-                "Cartão de visita",
-                ProductCategory.OFF_SET,
-                "Couchê 90g",
-                ColorBySide._4x4,
-                5, 9,
-                List.of("verniz total"),
-                1000,
-                new BigDecimal("90.00"));
-
-        var response = new ProductResponse(
-                1,
-                "Cartão de visita",
-                ProductCategory.OFF_SET,
-                "Couchê 90g",
-                ColorBySide._4x4,
-                5, 9,
-                List.of("verniz total"),
-                1000,
-                new BigDecimal("90.00"),
-                LocalDateTime.now());
-
 
         //when
         when(mapper.toResponseList(List.of(product))).thenReturn(List.of(response));

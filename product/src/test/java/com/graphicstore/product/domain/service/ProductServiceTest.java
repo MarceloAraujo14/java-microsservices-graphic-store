@@ -10,6 +10,7 @@ import com.graphicstore.product.domain.agregate.entity.Product;
 import com.graphicstore.product.domain.agregate.enums.ProductCategory;
 import com.graphicstore.product.domain.repository.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -41,6 +42,7 @@ class ProductServiceTest {
 
     @InjectMocks
     private ProductService underTest;
+
     private ProductRequest request;
     private Product product;
     private ProductResponse response;
@@ -82,6 +84,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should call repository to save a product")
     void save() {
         //given
         //when
@@ -100,6 +103,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should call the repository findbyid")
     void findById() throws ProductNotFoundException {
         //given
         var id = 1;
@@ -117,6 +121,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should throw error when trying to call repository.findbyid with an unregistered id")
     void findById2() {
         //given
         Integer id = 1;
@@ -131,6 +136,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should call repository.findall method.")
     void findAll() throws ProductNotFoundException {
 
         //given
@@ -149,6 +155,7 @@ class ProductServiceTest {
     }
 
     @Test
+    @DisplayName("Should throw error when call findall and repository is empity.")
     void findAll2() {
         //given
         //when
@@ -159,4 +166,32 @@ class ProductServiceTest {
                 .hasMessageContaining("No products registerd.");
         verify(repository, times(1)).findAll();
     }
+
+    @Test
+    @DisplayName("Should do nothing when call delete from repository.")
+    void delete() throws ProductNotFoundException {
+        //given
+        Integer id = 1;
+        //when
+        when(repository.findById(id)).thenReturn(Optional.of(product));
+        underTest.deleteById(id);
+        //then
+        verify(repository, times(1)).findById(id);
+        verify(repository, times(1)).deleteById(id);
+    }
+
+    @Test
+    @DisplayName("Should throw error when call delete from repository.")
+    void delete2() throws ProductNotFoundException {
+        //given
+        Integer id = 1;
+        //when
+        when(repository.findById(id)).thenReturn(Optional.empty());
+
+        //then
+        assertThatThrownBy(() -> underTest.deleteById(id)).isInstanceOf(ProductNotFoundException.class)
+                        .hasMessageContaining(String.format("No product with id: %d registered.", id));
+        verify(repository, times(1)).findById(id);
+    }
+
 }

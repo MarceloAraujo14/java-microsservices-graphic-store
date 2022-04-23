@@ -28,8 +28,6 @@ A
 product/mvnw.cmd,3\e\3e856d4a0c94e363cacab9c9898c54cbfc3b8a1c
 ]
 -product/.mvn/wrapper/maven-wrapper.properties,7\7\77f847f1b61d36381b2e440ddb784fbf5122df78
-…
-Uproduct/src/main/java/com/graphicstore/product/domain/agregate/audit/AuditObject.java,e\d\ed6ebfc2788e1cb873ae2909cbf3ac4290d86d4e
 }
 Mproduct/src/main/java/com/graphicstore/product/avro/schema/category_enum.java,9\1\9156728b3984bb67bb800f8778971c92933a7505
 z
@@ -56,8 +54,6 @@ v
 Fproduct/src/main/java/com/graphicstore/product/ProductApplication.java,4\7\4713fbba7c024715161af37aceff6086e4f6e013
 ‰
 Yproduct/src/main/java/com/graphicstore/product/domain/agregate/enums/ProductCategory.java,3\1\3136e9110fce02483b17d5f7f64d6dc2102941e9
-„
-Tproduct/src/main/java/com/graphicstore/product/api/controller/ProductController.java,c\9\c9706083c7295f5a52365fd6d4fe122545f3cfc1
 ‡
 Wproduct/src/main/java/com/graphicstore/product/domain/repository/ProductRepository.java,4\f\4f9080285167938b4a9b1d1b21b90d31ef40decc
 ‹

@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcb98e13-b8f2-40ab-a0cf-8fd45294cc15" name="Changes" comment="&quot;add tests to class service&quot;">
+    <list default="true" id="bcb98e13-b8f2-40ab-a0cf-8fd45294cc15" name="Changes" comment="&quot;refatoring test service class&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c9706083c7295f5a52365fd6d4fe122545f3cfc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed6ebfc2788e1cb873ae2909cbf3ac4290d86d4e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/graphicstore/product/api/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/graphicstore/product/api/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/graphicstore/product/domain/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/graphicstore/product/domain/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/test/java/com/graphicstore/product/domain/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/test/java/com/graphicstore/product/domain/service/ProductServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +39,15 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -82,7 +90,7 @@
       <recent name="com.graphicstore.product.domain.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductServiceTest">
+  <component name="RunManager" selected="JUnit.ProductServiceTest.delete2">
     <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="product" />
       <extension name="coverage">
@@ -94,6 +102,38 @@
       <option name="PACKAGE_NAME" value="com.graphicstore.product.domain.service" />
       <option name="MAIN_CLASS_NAME" value="com.graphicstore.product.domain.service.ProductServiceTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.graphicstore.product.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.graphicstore.product.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.graphicstore.product.domain.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.delete2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.graphicstore.product.domain.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.graphicstore.product.domain.service" />
+      <option name="MAIN_CLASS_NAME" value="com.graphicstore.product.domain.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="delete2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,28 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.findById2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.graphicstore.product.api.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.graphicstore.product.api.service" />
-      <option name="MAIN_CLASS_NAME" value="com.graphicstore.product.api.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="findById2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductServiceTest.delete2" />
+        <item itemvalue="JUnit.ProductServiceTest.delete" />
         <item itemvalue="JUnit.ProductServiceTest" />
         <item itemvalue="JUnit.ProductServiceTest.findAll2" />
         <item itemvalue="JUnit.ProductServiceTest.findAll" />
-        <item itemvalue="JUnit.ProductServiceTest.findById2" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650682454535</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;refatoring test service class&quot;">
+      <created>1650685810377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650685810377</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +227,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;recommit&quot;" />
     <MESSAGE value="&quot;add tests to class service&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add tests to class service&quot;" />
+    <MESSAGE value="&quot;refatoring test service class&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;refatoring test service class&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/graphic_store$ProductServiceTest.ic" NAME="ProductServiceTest Coverage Results" MODIFIED="1650682082038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -46,10 +46,16 @@ public class ProductService {
         return responses;
     }
 
-    public void delete() throws ProductNotFoundException {
-        if(repository.findAll().isEmpty()){
-            throw new ProductNotFoundException("No products registerd.");
+    public void deleteById(Integer id) throws ProductNotFoundException {
+        if(repository.findById(id).isEmpty()){
+            throw new ProductNotFoundException(
+                    String.format("No product with id: %d registered.", id));
         }
+        repository.deleteById(id);
+    }
+
+    public void deleteAll(){
+        repository.deleteAll();
     }
 
 }

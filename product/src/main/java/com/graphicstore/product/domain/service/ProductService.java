@@ -1,8 +1,5 @@
 package com.graphicstore.product.domain.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.graphicstore.product.api.exception.ProductNotFoundException;
 import com.graphicstore.product.domain.agregate.entity.Product;
 import com.graphicstore.product.domain.repository.ProductRepository;
@@ -11,8 +8,6 @@ import com.graphicstore.product.domain.service.dto.ProductResponse;
 import com.graphicstore.product.domain.service.mapper.ProductMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,13 +38,18 @@ public class ProductService {
         return productMapper.toResponse(product.get());
     }
 
-    public List<Product> findAll() throws ProductNotFoundException {
-        List<Product> products = repository.findAll();
-        if(products.isEmpty()){
-            throw new ProductNotFoundException(
-                    String.format("No products registerd."));
+    public List<ProductResponse> findAll() throws ProductNotFoundException {
+        List<ProductResponse> responses = productMapper.toResponseList(repository.findAll());
+        if(responses.isEmpty()){
+            throw new ProductNotFoundException("No products registerd.");
         }
-        return products;
+        return responses;
+    }
+
+    public void delete() throws ProductNotFoundException {
+        if(repository.findAll().isEmpty()){
+            throw new ProductNotFoundException("No products registerd.");
+        }
     }
 
 }

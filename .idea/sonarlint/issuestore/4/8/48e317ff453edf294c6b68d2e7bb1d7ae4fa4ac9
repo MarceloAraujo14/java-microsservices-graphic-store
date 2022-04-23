@@ -1,0 +1,34 @@
+
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÑÜêëøÿÿÿÿ
+t
+java:S2293!"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ¨³Ÿşÿÿÿÿ
+n
+java:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").(€ú±
+W	java:S107q"BConstructor has 11 parameters, which is greater than 7 authorized.(ûå¶
+f	java:S117q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûå¶
+g	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûùõú
+l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®•’ûÿÿÿÿ
+l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®•’ûÿÿÿÿ
+j	java:S116Z"URename this field "created_at" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÎÄ
+F
+java:S2160"+Override the "equals" method in this class.(’¢•«ûÿÿÿÿ
+<
+java:S1948Q"&Make "name" transient or serializable.(›øÉ¦
+F
+java:S1948S"+Make "substrate" transient or serializable.(üµöÂúÿÿÿÿ
+G
+java:S1948W",Make "finishings" transient or serializable.(ªƒñÎûÿÿÿÿ
+B
+java:S1948Y"'Make "price" transient or serializable.(ôô»şøÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(Òâíø
+k	java:S116©"URename this field "created_at" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÎÄ
+G
+java:S2160œ"+Override the "equals" method in this class.(¿ƒìıÿÿÿÿ
+V
+java:S6213Ï":Rename this variable to not match a restricted identifier.(Ú‹ìÊÿÿÿÿÿ
+J
+java:S1905æ".Remove this unnecessary cast to "DatumWriter".(Áµªûûÿÿÿÿ
+J
+java:S1905ï".Remove this unnecessary cast to "DatumReader".(¨µõºşÿÿÿÿ

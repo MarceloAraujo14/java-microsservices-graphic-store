@@ -29,4 +29,7 @@ public interface ProductMapper {
 
     @Mapping(target = "createdAt", source = "createdAt", dateFormat = "yyyy-MM-dd HH:mm:ss")
     ProductResponse toResponse(Product product);
+
+    @Mapping(target = "createdAt", source = "createdAt", dateFormat = "yyyy-MM-dd HH:mm:ss")
+    List<ProductResponse> toResponseList(List<Product> products);
 }

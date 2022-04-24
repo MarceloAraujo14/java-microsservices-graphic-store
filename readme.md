@@ -15,3 +15,15 @@ O projeto implementa as tecnologias:
 - Docker
 - Kafka
 - Openfeign
+
+Progress:
+ 
+v0.1
+ - Product Application
+   - receive request to register a product
+   - repository, service, mapper classes tested
+   - exceptions handler controller implemented
+   - flyway database migration implemented
+   - avro schema registry implemented
+   - todo: implement kafka communication
+   - todo: implement openfeign communication

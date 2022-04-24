@@ -50,8 +50,6 @@ w
 Gproduct/src/main/java/com/graphicstore/product/avro/schema/Product.java,4\8\48e317ff453edf294c6b68d2e7bb1d7ae4fa4ac9
 ‚
 Rproduct/src/main/java/com/graphicstore/product/domain/agregate/entity/Product.java,1\b\1b7cca47abc868a6b705ab7b335e7772cd061fa0
-v
-Fproduct/src/main/java/com/graphicstore/product/ProductApplication.java,4\7\4713fbba7c024715161af37aceff6086e4f6e013
 ‰
 Yproduct/src/main/java/com/graphicstore/product/domain/agregate/enums/ProductCategory.java,3\1\3136e9110fce02483b17d5f7f64d6dc2102941e9
 ‡
@@ -60,10 +58,6 @@ Wproduct/src/main/java/com/graphicstore/product/domain/repository/ProductReposit
 [product/src/test/java/com/graphicstore/product/domain/repository/ProductRepositoryTest.java,6\3\63b522a456139bf805606a16b7ee9a8f27eb7a63
 …
 Uproduct/src/main/java/com/graphicstore/product/domain/service/dto/ProductRequest.java,b\b\bbb4e3cad55198487b47875a872d31235ecf5489
-†
-Vproduct/src/main/java/com/graphicstore/product/domain/service/dto/ProductResponse.java,3\0\3021343ce401c44432ed91813a18163e93aea269
-9
-	readme.md,2\7\275d783e298228506068436512433d343feb52aa
 ~
 Nshopping-cart/src/main/java/com/graphicstore/cart/ShoppingCartApplication.java,9\8\9862441b2e232389a732007c22c6bb30a0278a7a
 ƒ
@@ -528,5 +522,7 @@ b
 Wproduct/src/main/java/com/graphicstore/product/domain/service/mapper/ProductMapper.java,3\2\32a49f4d37b400335cf1216b6cde37c44bdf985c
 ‹
 [product/src/test/java/com/graphicstore/product/domain/service/mapper/ProductMapperTest.java,f\a\fa358cc7759c3e0deec09db938749540f52e7bd5
-Š
-Zproduct/src/main/java/com/graphicstore/product/api/exception/ProductNotFoundException.java,c\a\caa3a65fbaa7eeac55d937e073db25b695b1a2ad
+…
+Uproduct/src/main/java/com/graphicstore/product/domain/agregate/audit/AuditObject.java,e\d\ed6ebfc2788e1cb873ae2909cbf3ac4290d86d4e
+…
+Uproduct/src/test/java/com/graphicstore/product/domain/service/ProductServiceTest.java,9\a\9abd25b8f9f66addef199bbe56b6b6bf75a72695
